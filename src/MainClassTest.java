@@ -3,9 +3,12 @@ import org.junit.Test;
 
 public class MainClassTest extends MainClass {
     @Test
-    public void testGetClassNumber() {
+    public void testGetClassString() {
 
-        int test_number = this.getClassNumber();
-        Assert.assertTrue("test_number cannot be > 45", test_number > 45);
+        String test_string = this.getClassString();
+
+        Assert.assertTrue("None of the substrings \"Hello\" or \"hello\" were found in the string \"Hello, world\"",
+                test_string.contains("Hello")
+                  || test_string.contains("hello"));
     }
 }
